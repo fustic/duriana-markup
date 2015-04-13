@@ -1,0 +1,76 @@
+.button
+	position relative
+	display inline-block
+	vertical-align top
+	height 40px
+	line-height 40px
+	padding 0 25px
+	color ctext
+	text-transform uppercase
+	font-size 11px
+	font-weight 600
+	text-decoration none
+	box-sizing border-box
+	background none
+	border 1px solid bdcolor
+	cursor pointer
+	transition .2s
+	text-transform uppercase
+	text-align center
+	letter-spacing 1.5px
+	&:hover
+		border-color color2
+		color color2
+
+	&.primary_clean
+		border-width 2px
+		border-color color1
+		color color1
+		&:hover
+			background-color lighten(color1,95%)
+
+	&.second_clean
+		border-width 2px
+		border-color color2
+		color color2
+		&:hover
+			background-color lighten(color2,95%)
+
+	&.primary
+		background-color color1
+		border none
+		color #fff
+		&:hover
+			background-color lighten(color1,10%)
+	&.second
+		background-color color2
+		border none
+		color #fff
+		&:hover
+			background-color lighten(color2,5%)
+
+	&.big
+		height 52px
+		line-height 52px
+	&.small
+		height 34px
+		line-height 34px
+		padding 0 20px
+		font-size 12px
+	&.disabled
+		background #aaa
+		color #f8f8f8
+		cursor default
+
+	&.facebook
+		background #3A589B url(../images/facebook_w.svg) no-repeat 25px 11px
+		background-size 8px
+		padding-left 50px
+		&:hover
+			background-color #4665AB
+	&.clean
+		border none
+		background-color transparent
+		line-height 42px
+		&:hover
+			color color2

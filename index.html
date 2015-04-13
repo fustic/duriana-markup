@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ui.bootstrap.demo">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.85, maximum-scale=0.85, user-scalable=no">
+
+	<title>Duriana</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/style_mobile.css" media="only screen and (max-width : 760px)">
+
+	<!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"> -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+   <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.js"></script>
+
+	<script>
+angular.module('ui.bootstrap.demo', ['ui.bootstrap']);
+angular.module('ui.bootstrap.demo').controller('CarouselDemoCtrl', function ($scope) {
+  $scope.myInterval = 5000;
+  var slides = $scope.slides = [];
+  $scope.addSlide = function() {
+    var newWidth = 600 + slides.length + 1;
+    slides.push({
+      image: 'http://placekitten.com/' + newWidth + '/300',
+      text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
+        ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
+    });
+  };
+  for (var i=0; i<4; i++) {
+    $scope.addSlide();
+  }
+});
+	</script>
+</head>
+<body>
+
+<div class="header_fixed">
+	<div class="top">
+		<div class="wrap">
+			<a href="#" class="button primary">Get the free app</a>
+			<h3>Sell in a Snap, Buy with a Chat</h3>
+			<p class="mobile_hide">Snap a photo to sell, buy what you want by chatting with sellers right from the app. <a href="#">Learn More</a></p>
+		</div>
+	</div>
+	<header>
+		<div class="wrap">
+			<a href="#" class="header_logo">Duriana</a>
+			<div class="header_menu">
+				<ul>
+					<li class="active"><a href="#"><span>Shop</span></a></li>
+					<li class="mobile_hide"><a href="#"><span>Sell</span></a></li>
+				</ul>
+			</div>
+			<div class="header_search_button mobile_show">
+				<a href="#" class="button"></a>
+			</div>
+			<div class="header_search mobile_hide">
+				<input type="text" name="" id="" placeholder="Search item">
+				<input type="submit" value="">
+			</div>
+
+			<div class="header_profile mobile_hide">
+				<a href="#" class="profile_name">
+					<img src="images/avatar.jpg"  alt="">
+					IZUDDINHELMI
+				</a>
+			</div>
+		</div>
+		<div class="header_submenu">
+			<div class="wrap">
+				<ul>
+					<li class="active"><a href="#">NEW ARRIVALS</a></li>
+					<li><a href="#">BEAUTY</a></li>
+					<li><a href="#">TECH GADGETS</a></li>
+					<li><a href="#">HIS FASHION</a></li>
+					<li><a href="#">MUSLIMAH FASHION</a></li>
+					<li><a href="#">HANDCRAFTS</a></li>
+					<li><a href="#">VINTAGE</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+</div>
+
+<!-- баннер -->
+<div class="home_banner" style="margin-top: 216px">
+	<div class="text wrap">
+		<h1>Shop the Marketplace</h1>
+		<p>Snap a photo of the item and list in seconds on out marketplace.</p>
+	</div>
+	<div class="back_img" style="background-image: url(images/home_banner_img.jpg);"></div>
+</div>
+
+<div class="home_banner" ng-controller="CarouselDemoCtrl">
+		<carousel interval="myInterval">
+			<slide ng-repeat="slide in slides" active="slide.active">
+				<div class="text wrap">
+					<h1>Slide {{$index}}</h1>
+					<p>{{slide.text}}</p>
+				</div>
+				<div class="back_img" style="background-image: url({{slide.image}});"></div>
+			</slide>
+		</carousel>
+</div>
+
+<div class="shopping block border">
+	<div class="wrap">
+		<div class="block_title">SHOPPING LISTS</div>
+		<div class="shopping_list">
+
+			<div class="item">
+				<img src="images/img1.jpg" alt="">
+				<a href="#"><span class="title">Accessories <span>Under $20</span></span></a>
+			</div>
+			<div class="item">
+				<img src="images/img3.jpg" alt="">
+				<a href="#"><span class="title">Only at <span>@Modcloth</span></span></a>
+			</div>
+			<div class="item">
+				<img src="images/img5.jpg" alt="">
+				<a href="#"><span class="title">Top Quality <span>Handcrafts</span></span></a>
+			</div>
+			<div class="item">
+				<img src="images/img2.jpg" alt="">
+				<a href="#"><span class="title">Accessories <span>Under $20</span></span></a>
+			</div>
+			<div class="item">
+				<img src="images/img4.jpg" alt="">
+				<a href="#"><span class="title">Sweet <span>Daytime Dress</span></span></a>
+			</div>
+			<div class="item">
+				<img src="images/img6.jpg" alt="">
+				<a href="#"><span class="title">Top Quality <span>Handcrafts</span></span></a>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="recommended_user block border">
+	<div class="wrap">
+		<div class="block_title">Recommended user</div>
+		<div class="recommended_user_list">
+
+			<div class="item">
+				<figure style="background: #8CA3A9;">
+					<div class="photo"><img src="images/avatar.jpg" alt=""></div>
+				</figure>
+				<div class="name">Hipster Fashion Paradise</div>
+				<div class="desc">Letterpress esse synth, quinoa sartorial cray enim tofu drinking vinegar.</div>
+				<div class="products">
+					<a href="#" style="background-image: url(images/img1.jpg);"></a>
+					<a href="#" style="background-image: url(images/img2.jpg);"></a>
+					<a href="#" style="background-image: url(images/img3.jpg);"></a>
+					<a href="#" style="background-image: url(images/img4.jpg);"></a>
+					<a href="#" style="background-image: url(images/img5.jpg);"></a>
+					<a href="#" style="background-image: url(images/img6.jpg);"></a>
+				</div>
+			</div>
+
+			<div class="item">
+				<figure style="background: #A6C7AE;">
+					<div class="photo"><img src="images/avatar.jpg" alt=""></div>
+				</figure>
+				<div class="name">Hipster Fashion Paradise</div>
+				<div class="desc">Letterpress esse synth, quinoa sartorial cray enim tofu drinking vinegar.</div>
+				<div class="products">
+					<a href="#" style="background-image: url(images/img1.jpg);"></a>
+					<a href="#" style="background-image: url(images/img2.jpg);"></a>
+					<a href="#" style="background-image: url(images/img3.jpg);"></a>
+					<a href="#" style="background-image: url(images/img4.jpg);"></a>
+					<a href="#" style="background-image: url(images/img5.jpg);"></a>
+					<a href="#" style="background-image: url(images/img6.jpg);"></a>
+				</div>
+			</div>
+			<div class="item">
+				<figure style="background: #D5B5CF;">
+					<div class="photo"><img src="images/avatar.jpg" alt=""></div>
+				</figure>
+				<div class="name">Hipster Fashion Paradise</div>
+				<div class="desc">Letterpress esse synth, quinoa sartorial cray enim tofu drinking vinegar.</div>
+				<div class="products">
+					<a href="#" style="background-image: url(images/img1.jpg);"></a>
+					<a href="#" style="background-image: url(images/img2.jpg);"></a>
+					<a href="#" style="background-image: url(images/img3.jpg);"></a>
+					<a href="#" style="background-image: url(images/img4.jpg);"></a>
+					<a href="#" style="background-image: url(images/img5.jpg);"></a>
+					<a href="#" style="background-image: url(images/img6.jpg);"></a>
+				</div>
+			</div>
+
+			<div class="item">
+				<figure style="background: #FFBCBB;">
+					<div class="photo"><img src="images/avatar.jpg" alt=""></div>
+				</figure>
+				<div class="name">Hipster Fashion Paradise</div>
+				<div class="desc">Letterpress esse synth, quinoa sartorial cray enim tofu drinking vinegar.</div>
+				<div class="products">
+					<a href="#" style="background-image: url(images/img1.jpg);"></a>
+					<a href="#" style="background-image: url(images/img2.jpg);"></a>
+					<a href="#" style="background-image: url(images/img3.jpg);"></a>
+					<a href="#" style="background-image: url(images/img4.jpg);"></a>
+					<a href="#" style="background-image: url(images/img5.jpg);"></a>
+					<a href="#" style="background-image: url(images/img6.jpg);"></a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="browse block border">
+	<div class="wrap">
+		<div class="block_title">BROWSE</div>
+		<div class="browse_list">
+			<div class="item">
+				<img src="images/img7.jpg" alt="">
+				<a href="#"><span class="title">CLOTHES</span></a>
+			</div>
+			<div class="item">
+				<img src="images/img2.jpg" alt="">
+				<a href="#"><span class="title">TRADITIONAL WEAR</span></a>
+			</div>
+			<div class="item">
+				<img src="images/img6.jpg" alt="">
+				<a href="#"><span class="title">BAGS</span></a>
+			</div>
+			<div class="item">
+				<img src="images/img8.jpg" alt="">
+				<a href="#"><span class="title">SHOES</span></a>
+			</div>
+
+			<div class="item">
+				<img src="images/img9.jpg" alt="">
+				<a href="#"><span class="title">ACCESSORIES</span></a>
+			</div>
+			<div class="item">
+				<img src="images/img10.jpg" alt="">
+				<a href="#"><span class="title">BEAUTY</span></a>
+			</div>
+			<div class="item">
+				<img src="images/img11.jpg" alt="">
+				<a href="#"><span class="title">GADGETS</span></a>
+			</div>
+			<div class="item">
+				<img src="images/img4.jpg" alt="">
+				<a href="#"><span class="title">HOBBIES</span></a>
+			</div>
+		</div>
+		<div class="more_title">AND MORE TO SHOP…</div>
+		<div class="more_list">
+			<a href="#">Kate Spade Handbags</a>
+			<a href="#">Just J. Crews</a>
+			<a href="#">Chanel Jewelery</a>
+			<a href="#">Zara</a>
+			<a href="#">Chanel Jewelery</a>
+			<a href="#">Fitness Favourites</a>
+			<a href="#">Party Heels</a>
+			<a href="#">Kate Spade Handbags</a>
+			<a href="#">Just J. Crews</a>
+			<a href="#">Chanel Jewelery</a>
+			<a href="#">Just J. Crews</a>
+			<a href="#">Zara</a>
+			<a href="#">Fitness Favourites</a>
+			<a href="#">Party Heels</a>
+			<a href="#">Just J. Crews</a>
+			<a href="#">Chanel Jewelery</a>
+		</div>
+	</div>
+</div>
+
+<div class="tizers block border">
+	<div class="wrap">
+		<div class="item easy_use">
+			<h3>Easy to Use</h3>
+			<p>We make it easy for you to sell your new or gently loved items in our marketplace with Full Service selling.</p>
+		</div>
+		<div class="item trusted">
+			<h3>Trusted</h3>
+			<p>We are always on the lookout to protect you from fraudulent activity and are always here to help.</p>
+		</div>
+		<div class="item secure">
+			<h3>Secure</h3>
+			<p>We use PayPal for our transactions so your account balance, purchases & sales are always secure.</p>
+		</div>
+	</div>
+</div>
+
+<div class="download_app wrap">
+	<div class="text">
+		<h2>Become a seller on Duriana, download the free app!</h2>
+		<p class="mobile_hide">Duriana is the easiest way to buy and sell your stuff. List an item for sale in less than 30 seconds. Shop for new and gently used items in fashion, beauty, vintage, gadgets & more.</p>
+		<div class="download_buttons">
+			<a href="#" class="google_play"></a>
+			<a href="#" class="app_store"></a>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<div class="wrap">
+		<div class="column three">
+			<a href="#" class="footer_logo"></a>
+			<div class="footer_desc">
+				<p class="color2">Before they sold out Brooklyn Tumblr literally Marfa pop-up asymmetrical mustache anim. </p>
+				<p>Schlitz id taxidermy, commodo pariatur literally pour-over blog. Anim aute Intelligentsia Blue Bottle.</p>
+			</div>
+			<div class="download_buttons">
+				<a href="#" class="google_play"></a>
+				<a href="#" class="app_store"></a>
+			</div>
+		</div>
+		<div class="column three footer_subscribe">
+			<div class="footer_menu ">
+				<div class="title">Subscribe newsletter</div>
+				<div class="form">
+					<input type="text" name="" id="" placeholder="Enter your email here" class="column full">
+					<input type="submit" value="SUBSCRIBE" class="button second">
+				</div>
+			</div>
+		</div>
+		<div class="column two mobile_hide">
+			<div class="footer_menu">
+				<div class="title">Shop</div>
+				<ul>
+					<li><a href="#">Clothing</a></li>
+					<li><a href="#">Traditional Wear</a></li>
+					<li><a href="#">Bags</a></li>
+					<li><a href="#">Shoes</a></li>
+					<li><a href="#">Accessories</a></li>
+					<li><a href="#">Beauty</a></li>
+					<li><a href="#">Gadgets</a></li>
+					<li><a href="#">Hobbies</a></li>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">The Rest</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="column two">
+			<div class="footer_menu">
+				<div class="title">Company</div>
+				<ul>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">How to buy & sell in Duriana</a></li>
+					<li><a href="#">Help Center</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact us</a></li>
+					<li><a href="#">Terms</a></li>
+					<li><a href="#">Privacy</a></li>
+				</ul>
+			</div>
+			<div class="footer_menu">
+				<div class="title">Social</div>
+				<ul>
+					<li><a href="#" class="social_w_fb">Facebook</a></li>
+					<li><a href="#" class="social_w_tw">Twitter</a></li>
+					<li><a href="#" class="social_w_in">Instagram</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="column two">
+			<div class="footer_menu">
+				<div class="title">Help</div>
+				<ul>
+					<li><a href="#">FAQs</a></li>
+					<li><a href="#">Full Service</a></li>
+					<li><a href="#">Buyer Protection</a></li>
+					<li><a href="#">Returns</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="footer_menu">
+				<div class="title">Paypent Method</div>
+				<a href="#" class="payment_visa"></a>
+				<a href="#" class="payment_mastercard"></a>
+				<a href="#" class="payment_american"></a>
+				<a href="#" class="payment_paypal"></a>
+			</div>
+		</div>
+		<div class="copyright">© 2015 Duriana. All rights reserved.</div>
+
+	</div>
+</footer>
+
+</body>
+</html>

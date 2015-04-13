@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="27px" height="28px" viewBox="0 0 27 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>Stroke 1 + Stroke 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Categories" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Marketplace---Mobile" sketch:type="MSArtboardGroup" transform="translate(-569.000000, -151.000000)" stroke="#222222" stroke-width="4">
+            <g id="search-icon" sketch:type="MSLayerGroup" transform="translate(545.962406, 135.000000)">
+                <g id="Stroke-1-+-Stroke-2" transform="translate(25.000000, 18.000000)" sketch:type="MSShapeGroup">
+                    <path d="M17.5137845,8.25 C17.5137845,12.8060625 13.816761,16.5 9.25689223,16.5 C4.6970235,16.5 1,12.8060625 1,8.25 C1,3.69342187 4.6970235,0 9.25689223,0 C13.816761,0 17.5137845,3.69342187 17.5137845,8.25 L17.5137845,8.25 Z" id="Stroke-1"></path>
+                    <path d="M14.4790638,14.9310625 L22.643066,23.125" id="Stroke-2" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

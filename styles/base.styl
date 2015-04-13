@@ -1,0 +1,217 @@
+@import 'nib'
+@import 'variables.styl'
+
+::-webkit-scrollbar
+	height 10px
+	width 10px
+	background transparent
+::-webkit-scrollbar-thumb
+	border-radius 10px
+	cursor pointer
+	width 10px
+	border 3px solid rgba(0, 0, 0, 0)
+	background-clip padding-box
+	background-color #666
+	box-shadow inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05)
+	&:hover
+		background-color #333
+
+
+@font-face
+	font-family: 'Blanch';
+	src: url('../fonts/blanch_caps-webfont.eot');
+	src: url('../fonts/blanch_caps-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/blanch_caps-webfont.woff2') format('woff2'),
+		url('../fonts/blanch_caps-webfont.woff') format('woff'),
+		url('../fonts/blanch_caps-webfont.ttf') format('truetype'),
+		url('../fonts/blanch_caps-webfont.svg#blanchcaps') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+
+*
+	margin 0
+	padding 0
+	outline none
+
+html, body
+	min-height 100%
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+body
+	position relative
+	background #fff
+	font-family fftext
+	color ctext
+	font-size 14px
+	min-width wrapmin
+
+h1, h2, h3
+	font-weight normal
+h1
+	font-size 32px
+	margin 0 0 40px
+	color ctext
+h2
+	font-size 26px
+h3
+	font-size 20px
+
+a
+	color ctext
+	transition .1s
+	text-decoration none
+	cursor pointer
+	&:hover
+		color color2
+	img
+		border none
+
+ul li
+	list-style none
+
+
+div, header, footer, nav, aside, menu, article, section
+	position relative
+
+.hidden
+	display none!important
+.show
+	display block!important
+
+.a_center
+	text-align center
+.a_left
+	text-align left
+.a_right
+	text-align right
+
+.f-left
+	float left
+.f-right
+	float right
+
+.mobile_show
+	display none
+
+.mobile_hide
+	display block
+
+&.color2
+	color color2
+
+
+.wrap
+	width 93%
+	max-width wrapmax
+	min-width wrapmin
+	margin 0 auto
+	height 100%
+
+.w100
+	width 100%!important
+.w50
+	width 50%!important
+
+
+// ------------  grid -----------------
+
+
+.row, .rows
+	clearfix()
+.column,
+.columns
+	width 100%
+	float left
+
+@media (min-width: 720px)
+	.column,
+	.columns
+		box-sizing border-box
+		margin-left 3%
+	.column:first-child,
+	.columns:first-child
+		margin-left 0
+	.column,
+	.columns
+		&.one
+			width 5.58333333333%
+		&.two
+			width 14.1666666667%
+		&.three
+			width 22.75%
+			&:nth-of-type(4n-3)
+				margin-left 0
+		&.four
+			width 31.3333333333%
+			&:nth-of-type(3n-2)
+				margin-left 0
+		&.five
+			width 39.9166666667%
+		&.six
+			width 48.5%
+		&.seven
+			width 57.0833333333%
+		&.eight
+			width 65.6666666667%
+		&.nine
+			width 74.25%
+		&.ten
+			width 82.8333333333%
+		&.eleven
+			width 91.4166666667%
+		&.twelve, &.full
+			width 100%
+			margin-left 0
+			float none
+		&.one-third
+			width 30.6666666667%
+		&.two-thirds
+			width 65.3333333333%
+		&.half
+			width 48.5%
+
+	.offset-by-one.column,
+	.offset-by-one.columns
+		margin-left 8.66666666667%
+	.offset-by-two.column,
+	.offset-by-two.columns
+		margin-left 17.3333333333%
+	.offset-by-three.column,
+	.offset-by-three.columns
+		margin-left 26%
+	.offset-by-four.column,
+	.offset-by-four.columns
+		margin-left 34.6666666667%
+	.offset-by-five.column,
+	.offset-by-five.columns
+		margin-left 43.3333333333%
+	.offset-by-six.column,
+	.offset-by-six.columns
+		margin-left 52%
+	.offset-by-seven.column,
+	.offset-by-seven.columns
+		margin-left 60.6666666667%
+	.offset-by-eight.column,
+	.offset-by-eight.columns
+		margin-left 69.3333333333%
+	.offset-by-nine.column,
+	.offset-by-nine.columns
+		margin-left 78.0%
+	.offset-by-ten.column,
+	.offset-by-ten.columns
+		margin-left 86.6666666667%
+	.offset-by-eleven.column,
+	.offset-by-eleven.columns
+		margin-left 95.3333333333%
+	.offset-by-one-third.column,
+	.offset-by-one-third.columns
+		margin-left 34.6666666667%
+	.offset-by-two-thirds.column,
+	.offset-by-two-thirds.columns
+		margin-left 69.3333333333%
+	.offset-by-one-half.column,
+	.offset-by-one-half.columns
+		margin-left 52%
+
+

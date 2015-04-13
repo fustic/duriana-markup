@@ -1,0 +1,76 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="search"],
+input[type="number"]
+textarea
+	height 40px
+	padding 0 15px
+	font-size 13px
+	font-family fftext
+	color ctext
+	background-color #fff
+	border 1px solid bdcolor
+	transition .3s
+	box-sizing border-box
+	border-radius 0
+	-webkit-appearance none
+	appearance none
+	box-shadow none
+	&:focus
+		border-color bdcolor
+	&[disabled]
+		cursor not-allowed
+	&.succes, &.ng-touched.ng-valid
+		border-color #59B450!important
+		background-color #EFFBF1!important
+	&.error, &.ng-touched.ng-invalid
+		border-color #E27575!important
+		background-color #FBEFEF!important
+input[type='submit']
+	cursor pointer
+	-webkit-appearance none
+	appearance none
+	border-radius 0
+textarea
+	padding 5px 10px
+	height 80px
+	resize none
+.columns
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="tel"],
+	input[type="search"],
+	textarea
+		width 100%
+
+.form_select
+	height 40px
+	background url(../images/select_arrow.svg) no-repeat calc(100% - 15px) center
+	width auto
+	display inline-block
+	vertical-align middle
+	overflow hidden
+	border 1px solid bdcolor
+	select
+		background transparent
+		appearance none
+		height 40px
+		width 120%
+		width calc(100% + 20px)
+		border none
+		border-radius 0
+		font-family fftext
+		font-size 11px
+		font-weight 600
+		text-transform uppercase
+		letter-spacing 2px
+		padding 0 40px 0 15px
+		cursor pointer
+		margin 0
+		&:focus
+			color color1
+		option
+			color ctext

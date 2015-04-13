@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>Imported Layers</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Categories" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Marketplace" sketch:type="MSArtboardGroup" transform="translate(-58.000000, -1679.000000)" stroke="#FFFFFF" stroke-width="2" fill="#FFFFFF">
+            <g id="Imported-Layers" sketch:type="MSLayerGroup" transform="translate(69.000000, 1690.000000) scale(-1, 1) translate(-69.000000, -1690.000000) translate(59.000000, 1680.000000)">
+                <path d="M19.5833333,10.212766 L0.416666667,10.212766 C0.18625,10.212766 0,10.0225532 0,9.78723404 C0,9.55191489 0.18625,9.36170213 0.416666667,9.36170213 L19.5833333,9.36170213 C19.81375,9.36170213 20,9.55191489 20,9.78723404 C20,10.0225532 19.81375,10.212766 19.5833333,10.212766" id="Fill-1" sketch:type="MSShapeGroup"></path>
+                <path d="M10.8333333,19.5744681 C10.7354167,19.5744681 10.6370833,19.5395745 10.5583333,19.4685106 L0.141666667,10.1068085 C0.0516666667,10.0255319 0,9.9093617 0,9.78723404 C0,9.66510638 0.0516666667,9.54893617 0.141666667,9.46765957 L10.5583333,0.105957447 C10.73,-0.0485106383 10.99375,-0.0327659574 11.14625,0.144680851 C11.2979167,0.320851064 11.28125,0.589787234 11.1083333,0.745106383 L1.0475,9.78723404 L11.1083333,18.8293617 C11.28125,18.9846809 11.2979167,19.253617 11.14625,19.4297872 C11.06375,19.5255319 10.94875,19.5744681 10.8333333,19.5744681" id="Fill-2" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

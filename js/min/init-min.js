@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){if(screen.width>640)var e={container:$(".card_list"),offset:20,autoResize:!0,outerOffset:0,itemWidth:190,flexibleWidth:"80%"};if(screen.width<640)var e={container:$(".card_list"),offset:15,autoResize:!0,outerOffset:0,itemWidth:120,flexibleWidth:"80%"};var t=$(".card_item");t.wookmark(e)});

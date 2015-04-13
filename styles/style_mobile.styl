@@ -1,0 +1,358 @@
+@import 'nib'
+@import 'variables.styl'
+
+wrapmin = 320px
+wrapmax = 720px
+
+body
+	min-width wrapmin
+	&.scroll_blocked
+		max-height 100%
+		overflow hidden
+
+.wrap
+	max-width wrapmax
+	min-width wrapmin - 20px
+
+.mobile_show
+	display block
+
+.mobile_hide
+	display none
+
+.button
+	padding 0 15px
+	font-size 12px
+.form_select select
+	padding-right 30px
+
+.top
+	h3
+		text-transform uppercase
+	.wrap
+		min-width wrapmin
+		width 95%
+
+header
+	.header_menu
+		right 50px
+		left auto
+		li
+			a
+				padding 0
+				line-height normal
+			span
+				display inline-block
+				box-sizing border-box
+				border 1px solid bdcolor
+				height 40px
+				line-height 40px
+				padding-right 25px
+				padding-left 15px
+				margin 20px 0 0
+				background #fff url(../images/select_arrow.svg) no-repeat calc(100% - 10px) center
+			&.active
+				a
+					color ctext
+	.header_submenu
+		font-size 12px
+		z-index 1
+		.wrap
+			white-space nowrap
+			overflow auto
+			-webkit-overflow-scrolling touch
+		li
+			box-sizing border-box
+			&:first-child
+				a
+					padding-left 10px
+			a
+				padding 0 10px
+
+			&.active
+				border-bottom 3px solid color2
+
+
+	.header_search
+		position fixed
+		border-top 1px solid bdcolorlight
+		background #fff
+		left 0
+		width 100%
+		right 0
+		bottom 0
+		z-index 100
+		padding 15px
+		box-sizing border-box
+		overflow auto
+		-webkit-overflow-scrolling touch
+
+
+	.header_search_button
+		right 0
+		top 0
+		height 80px
+		position absolute
+		box-sizing border-box
+		padding 20px 0 0
+		z-index 200
+		.button
+			width 40px
+			background url(../images/icon_search2.svg) no-repeat center
+			background-size 20px
+		&.active
+			&:after, &:before
+				bottom 0
+				left 50%
+				border solid transparent
+				content " "
+				height 0
+				width 0
+				position absolute
+				pointer-events none
+				margin-bottom -1px
+			&:after
+				border-color rgba(255, 255, 255, 0)
+				border-bottom-color #fff
+				border-width 12px
+				margin-left -12px
+			&:before
+				border-color rgba(194, 225, 245, 0)
+				border-bottom-color bdcolorlight
+				border-width 13px
+				margin-left -13px
+
+.search_list
+	margin 15px 0 0 10px
+	.search_list_title
+		font-size 14px
+		color ctext + 50%
+		font-weight 600
+		margin 0 0 10px
+		text-transform uppercase
+	ul
+		margin 0 0 20px
+		font-size 15px
+	li
+		margin 0 0 5px
+
+.home_banner
+	height 230px
+	.text
+		padding-top 50px
+		padding-right 70px
+	h1
+		font-size 70px
+		line-height 45px
+		margin 0 0 10px
+
+.block
+	padding  30px 0
+.block_title
+	margin-bottom 30px
+
+.shopping_list
+	.item
+		height 100px
+		width 46%
+		margin-right 4%
+		&:nth-child(2n)
+			margin-right 0
+		&:nth-child(3n)
+			margin-right 4%
+		a
+			padding 50px 0 0
+			font-size 12px
+			.title
+				height auto
+				line-height 14px
+				padding 5px 10px
+				span
+					display block
+
+.recommended_user_list
+	.item
+		width 70%
+		margin-right 0
+		.products
+			width 90%
+			a
+				width 31.3333%
+				height 60px
+				margin-right 3%
+				&:nth-child(3n)
+					margin-right 0
+					& ~ a
+						display none
+
+.browse_list
+	.item
+		width 46%
+		margin-right 4%
+		&:nth-child(2n)
+			margin-right 0
+		&:nth-child(3n)
+			margin-right 4%
+		a
+			font-size 10px
+			.title
+				padding 0 10px
+.browse
+	.more_list
+		a
+			width 50%
+
+.tizers
+	.item
+		float none
+		width 100%
+		text-align left
+		background-position 15px 5px!important
+		background-size 40px auto!important
+		padding 0 0 0 80px
+		margin 0 0 20px
+		h3
+			margin-bottom 5px
+
+.download_app
+	padding 40px 0  300px
+	background-position center 120%
+	background-size 70% auto
+	text-align center
+	.text
+		margin 0
+	h2
+		font-size 24px
+		line-height 28px
+	.download_buttons
+		a
+			width 150px
+			margin 0 5px
+
+
+footer
+	padding 30px 0 0
+	font-size 13px
+	.column
+		margin 0 0 30px
+	.column.three
+		width 100%
+		float none
+		margin-left 0
+	.column.two
+		width 48%
+
+.footer_desc
+	max-width 100%
+	font-size 14px
+.footer_menu
+	margin-bottom 30px
+
+
+.category_banner
+	height 166px
+	margin 0 0 15px
+	&:after
+		display none
+	&:before
+		left -60px
+	h1
+		font-size 55px
+		line-height 48px
+		height 60px
+		padding 0 20px
+		left 30px
+.breadcrumbs
+	padding-bottom 15px
+.sort_block
+	margin-bottom 15px
+	&.bottom
+		padding-top 15px
+	.filter_button
+		float right
+		.button
+			background url(../images/icon_filters.svg) no-repeat 12px center
+			background-size 15px auto
+			padding-left 35px
+.filters_mobile
+	background #F0F0F0
+	padding 15px 30px
+	margin 15px -30px
+	border-top 1px solid bdcolorlight
+	border-bottom 1px solid bdcolorlight
+	&:after, &:before
+		bottom 100%
+		left calc(100% - 80px)
+		border solid transparent
+		content " "
+		height 0
+		width 0
+		position absolute
+		pointer-events none
+	&:after
+		border-color rgba(136, 183, 213, 0)
+		border-bottom-color #F0F0F0
+		border-width 10px
+		margin-left -10px
+	&:before
+		border-color rgba(194, 225, 245, 0)
+		border-bottom-color bdcolorlight
+		border-width 12px
+		margin-left -12px
+
+	.filters_mobile_title
+		font-size 13px
+		color ctext + 50%
+		font-weight 600
+		letter-spacing 1px
+		margin 0 0 15px
+
+.filter_block
+	margin 0 0 12px
+	.filter_block_title
+		border-bottom-color bdcolorlight
+		font-size 14px
+		font-weight 500
+		letter-spacing 1px
+		margin 0 0 12px
+		padding 0 0 10px
+		.caret
+			font-size 11px
+.filter_list
+	li
+		margin-bottom 12px
+.save_filter
+	margin-top 15px
+	padding 0 35px
+
+.selected_filters
+	width 100%
+	max-width 100%
+	margin 15px 0
+
+
+.product_id_photos_images
+	height 270px
+	width 100%
+	float none
+	li
+		text-align center
+	img
+		max-height 270px
+		max-width 100%
+.product_id_photos_thumbnails
+	display none
+
+.produc_id_user_link
+	margin-right 20px
+.produc_id_user_img
+	width 50px
+	height 50px
+.produc_id_user_name
+	margin-top 4px
+.produc_id_user_name,
+.produc_id_user_address
+	margin-left 65px
+.produc_id_user_buttons
+	padding-top 4px
+	float right
