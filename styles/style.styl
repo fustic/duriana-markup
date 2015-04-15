@@ -10,7 +10,7 @@
 	background ctext
 	color #fff
 	font-size 12px
-	padding 20px 0
+	padding 10px 0
 	.wrap
 		min-width 750px
 		width 750px
@@ -30,7 +30,7 @@ header
 		z-index 10
 .header_logo
 	width 120px
-	height 80px
+	height 65px
 	background url(../images/logo.png) no-repeat center
 	background-size 120px 50px
 	display inline-block
@@ -55,7 +55,7 @@ header
 			display block
 			padding 0 21px
 			height 100%
-			line-height 80px
+			line-height 65px
 			position relative
 		&.active
 			&>a:after, &>a:before
@@ -69,7 +69,7 @@ header
 				pointer-events none
 				margin-bottom -1px
 			&>a:after
-				border-color rgba(255, 255, 255, 0)
+				border-color rgba(255,255,255, 0)
 				border-bottom-color #fff
 				border-width 12px
 				margin-left -12px
@@ -87,18 +87,18 @@ header
 	font-weight 600
 	li
 		display inline-block
-		height 55px
-		&:first-child
-			a
-				padding-left 0
+		height 40px
 		a
-			line-height 55px
+			line-height 40px
 			padding 0 16px
+			display block
+		&.active
+			border-bottom 3px solid color2
 
 
 .header_search
 	position absolute
-	top 20px
+	top 12px
 	left 400px
 	width 33%
 	input[type='text'],
@@ -115,8 +115,11 @@ header
 
 .header_profile
 	position absolute
-	top 20px
+	top 12px
 	right 0
+
+	.signin
+		border-color transparent
 
 	.profile_name
 		display inline-block
@@ -201,13 +204,9 @@ header
 		width 32%
 		margin-right 2%
 		float left
+		background-size cover
 		&:nth-child(3n)
 			margin-right 0
-		img
-			position absolute
-			left 0
-			top 0
-			height 100%
 		a
 			position relative
 			display block

@@ -29,6 +29,11 @@ body.scroll_blocked {
   min-width: 320px;
   width: 95%;
 }
+header .header_logo {
+  -webkit-background-size: 110px auto;
+  -moz-background-size: 110px auto;
+  background-size: 110px auto;
+}
 header .header_menu {
   right: 50px;
   left: auto;
@@ -47,7 +52,7 @@ header .header_menu li span {
   line-height: 40px;
   padding-right: 25px;
   padding-left: 15px;
-  margin: 20px 0 0;
+  margin: 12px 0 0;
   background: #fff url("../images/select_arrow.svg") no-repeat calc(100% - 10px) center;
 }
 header .header_menu li.active a {
@@ -73,9 +78,6 @@ header .header_submenu li:first-child a {
 header .header_submenu li a {
   padding: 0 10px;
 }
-header .header_submenu li.active {
-  border-bottom: 3px solid #fe4080;
-}
 header .header_search {
   position: fixed;
   border-top: 1px solid #ddd;
@@ -95,12 +97,12 @@ header .header_search {
 header .header_search_button {
   right: 0;
   top: 0;
-  height: 80px;
+  height: 65px;
   position: absolute;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 20px 0 0;
+  padding: 12px 0 0;
   z-index: 200;
 }
 header .header_search_button .button {
@@ -246,9 +248,9 @@ header .header_search_button.active:before {
 .download_app {
   padding: 40px 0 300px;
   background-position: center 120%;
-  -webkit-background-size: 70% auto;
-  -moz-background-size: 70% auto;
-  background-size: 70% auto;
+  -webkit-background-size: 250px auto;
+  -moz-background-size: 250px auto;
+  background-size: 250px auto;
   text-align: center;
 }
 .download_app .text {
